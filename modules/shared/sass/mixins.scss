@@ -1,0 +1,14 @@
+@mixin print-styles($map, $keys...) {
+  $i: 1;
+  $length: length($keys);
+  @while $length >= $i {
+    $map: map-get($map, nth($keys, $i));
+    $i: $i + 1;
+  }
+
+  @each $property, $value in $map {
+    @if type-of($value) != map {
+      #{$property}: $value;
+    }
+  }
+}

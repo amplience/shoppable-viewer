@@ -1,0 +1,20 @@
+{{#if buttons.viewContent}}
+    <div class="ajs-show-content ajs-contents apdf-contents">
+        <div class="swiper-lazy-preloader"></div>
+    </div>
+{{/if}}
+
+<div class="ajs-hide-content apdf-carousel-box {{#ifCond aspectRatio '==' true}}apdf-carousel-aspect{{/ifCond}}">
+    <div class="{{wrapperClass}}">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{#set}}
+                    {{> _carousel_slide templates= ../ampTemplates/mainPic}}
+                {{/set}}
+            </div>
+            <div class="ajs-preloader carousel-preloader"></div>
+        </div>
+        <div class="ajs-swiper-next-{{id}} {{carouselClass.next}}"></div>
+        <div class="ajs-swiper-prev-{{id}} {{carouselClass.prev}}"></div>
+    </div>
+</div>

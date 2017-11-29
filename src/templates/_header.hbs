@@ -1,0 +1,50 @@
+<div class="apdf-catalog-header am-cf">
+    <div class="{{titleClass}}">{{title}}</div>
+    <div class="apdf-catalog-header-box am-cf">
+        <ul class="apdf-nav apdf-left-nav">
+            {{#if buttons.allCatalogs}}
+                <li class="apdf-all-catalogs-button">
+                    <a href="{{buttons.allCatalogs.url}}"
+                       class="apdf-icon {{buttons.allCatalogs.icoClass}} {{buttons.allCatalogs.linkClass}}">
+                        <span class="apdf-header-link-txt">{{buttons.allCatalogs.txt}}</span>
+                    </a>
+                </li>
+            {{/if}}
+
+            {{#if buttons.viewContent}}
+                <li class="ajs-hide-content apdf-view-contents-button">
+                    <a class="ajs-open-contents apdf-icon {{buttons.viewContent.icoClass}} {{buttons.viewContent.linkClass}}">
+                        <span class="apdf-header-link-txt">{{buttons.viewContent.txt}}</span>
+                    </a>
+                </li>
+            {{/if}}
+        </ul>
+
+        <ul class="apdf-nav apdf-right-nav">
+            {{#if buttons.zoom}}
+                <li class="ajs-hide-content apdf-zoom-button">
+                    <a class="ajs_zoom_init apdf-icon {{buttons.zoom.icoClass}} {{buttons.zoom.linkClass}}">
+                        <span class="apdf-header-link-txt">{{buttons.zoom.txt}}</span>
+                    </a>
+                </li>
+            {{/if}}
+
+            {{#if buttons.download}}
+                <li class="ajs-hide-content apdf-shop-the-look">
+                    <a class="apdf-icon {{buttons.download.icoClass}} {{buttons.download.linkClass}}"
+                       href="{{buttons.download.url}}" download="">
+                        <span class="apdf-header-link-txt">{{buttons.download.txt}}</span>
+                    </a>
+                </li>
+            {{/if}}
+            {{#if buttons.viewContent}}
+                <li class="ajs-show-content">
+                    <div class="ajs-close-contents apdf-close-contet apdf-icon {{buttons.closeContents.icoClass}}"></div>
+                </li>
+            {{/if}}
+
+        </ul>
+
+        <div class="{{titleClass}}">{{title}}</div>
+    </div>
+</div>

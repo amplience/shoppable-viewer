@@ -1,0 +1,68 @@
+
+.apdf-carousel-box {
+  margin: 0 auto;
+  position: relative;
+  @include carousel-box();
+
+  .apdf-carousel-wrap {
+    border: $carousel-border-style;
+    padding: $carousel-padding;
+  }
+
+  .swiper-slide-img {
+    width: 100%;
+  }
+
+  &.apdf-carousel-aspect {
+    .swiper-slide,
+    .ajs-pdf-zoom-wrap {
+      text-align: center;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .ajs-pdf-zoom-wrap {
+      margin: 0 auto;
+    }
+
+    .swiper-slide-img,
+    .swiper-slide-pic {
+      display: inline;
+      vertical-align: top;
+      text-align: center;
+      width: auto;
+      height: 100%;
+      min-width: 0;
+    }
+  }
+
+  //Zoom
+  .ajs-zoom-overlay {
+    cursor: move;
+  }
+
+  .ajs-zoom-wrap {
+    .ajs-zoomed {
+      width: auto;
+      height: auto;
+      max-width: none;
+    }
+  }
+
+  .carousel-preloader {
+    z-index: -1;
+  }
+
+  .swiper-wrapper {
+    position: static;
+  }
+
+  svg {
+    g {
+      polygon {
+        fill-opacity: 0.5;
+      }
+    }
+  }
+}

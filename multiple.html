@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- build:css styles.min.css -->
+    <link rel="stylesheet" href="dist/styles.css"/>
+    <!-- /build -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ajs-pdf-viewer {
+            position: relative;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="ajs-pdf-viewer">
+    <div class="swiper-lazy-preloader"></div>
+</div>
+
+<div class="ajs-pdf-viewer_2">
+    <div class="swiper-lazy-preloader"></div>
+</div>
+
+
+<!-- build:js bundle.min.js -->
+<script src="dist/bundle.js"></script>
+<!-- /build -->
+
+<script>
+    window.ajsViewer = new PDFViewer({
+        id: 'viewer_1',
+        target: '.ajs-pdf-viewer',
+        buttons: {
+            closeContents: {
+                icoClass: 'apdf-icon-close-contents'
+            },
+            allCatalogs: {
+                txt: 'All Catalogs',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-all-catalogs',
+                url: '#1'
+            },
+            viewContent: {
+                txt: 'View Contents',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-view-contents'
+            },
+            zoom: {
+                txt: 'Zoom',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-zoom-in',
+                icoClassOut: 'apdf-icon-zoom-out'
+            },
+            download: {
+                txt: 'Download',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-download',
+                url: '#2'
+            }
+        }
+    });
+
+    window.ajsViewer2 = new PDFViewer({
+        id: 'viewer_2',
+        target: '.ajs-pdf-viewer_2',
+        carousel: {
+            nextButton: '.ajs-swiper-next-',
+            prevButton: '.ajs-swiper-prev-',
+            speed: 300,
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            loop: false,
+            hashnav: false,
+            hashnavWatchState: false,
+            preloadImages: false,
+            lazyLoading: true,
+            lazyLoadingInPrevNext: true,
+            lazyLoadingInPrevNextAmount: 1,
+            lazyLoadingOnTransitionStart: true,
+            simulateTouch: false
+        },
+        buttons: {
+            closeContents: {
+                icoClass: 'apdf-icon-close-contents'
+            },
+            allCatalogs: {
+                txt: 'All Catalogs',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-all-catalogs',
+                url: '#1'
+            },
+            viewContent: {
+                txt: 'View Contents',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-view-contents'
+            },
+            zoom: {
+                txt: 'Zoom',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-zoom-in',
+                icoClassOut: 'apdf-icon-zoom-out'
+            },
+            download: {
+                txt: 'Download',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-download',
+                url: '#2'
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

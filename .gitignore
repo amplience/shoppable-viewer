@@ -1,0 +1,6 @@
+node_modules
+_modules
+old
+svg
+tests_output/*
+selenium-debug.log

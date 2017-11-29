@@ -1,0 +1,23 @@
+.apdf-pagination {
+    position: absolute;
+    bottom: 0;
+    line-height: 43px;
+    color: #777;
+    width: 100%;
+    text-align: center;
+    width: 100%;
+
+    span.apdf-pagination-prev:hover, span.apdf-pagination-next:hover {
+      color: #000;
+    }
+
+    .apdf-pag-container {
+      margin: 0 auto;
+      .apdf-pag-nav {
+        width: auto;
+        margin: 0 auto 0;
+        display: inline-table;
+        position: relative;
+      }
+    }
+  }

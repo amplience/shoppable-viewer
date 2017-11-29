@@ -1,0 +1,36 @@
+.apdf-container {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+
+  @include font();
+
+  position: relative;
+  margin: 0 20px;
+
+  .apdf-viewer-main {
+    height: 100%;
+  }
+
+  .apdf-viewer-main-container {
+    height: 700px;
+  }
+}
+
+.ajs-without-contents {
+  .ajs-show-content {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    overflow: hidden;
+    margin: 0 !important;
+  }
+}
+
+.apdf-standard-template {
+  //Add any styles here to overwrite defaults
+}

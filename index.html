@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- build:css styles.min.css -->
+    <link rel="stylesheet" href="dist/styles.css"/>
+    <!-- /build -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ajs-pdf-viewer {
+            position: relative;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="ajs-pdf-viewer">
+    <div class="swiper-lazy-preloader"></div>
+</div>
+
+<!-- build:js bundle.min.js -->
+<script src="dist/bundle.js"></script>
+<!-- /build -->
+
+<script>
+    window.ajsViewer = new PDFViewer({
+        setData: {
+            account: 'csdemo',
+            name: 'CA-catalogue_set',
+            path: 'http://i1.adis.ws/',
+            type: 's'
+        },
+        target: '.ajs-pdf-viewer',
+        buttons: {
+            closeContents: {
+                icoClass: 'apdf-icon-close-contents'
+            },
+            allCatalogs: {
+                txt: 'All Catalogs',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-all-catalogs',
+                url: '#1'
+            },
+            viewContent: {
+                txt: 'View Contents',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-view-contents'
+            },
+            zoom: {
+                txt: 'Zoom',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-zoom-in',
+                icoClassOut: 'apdf-icon-zoom-out'
+            },
+            download: {
+                txt: 'Download',
+                linkClass: 'apdf-header-link',
+                icoClass: 'apdf-icon-download',
+                url: '#2'
+            }
+        },
+        POI: {
+            config: [
+                {
+                    name: 'hotspot',
+                    callbacks: [{
+                        action: 'click',
+                        callback: function (evt, settings) {
+                            console.log('clicked', settings);
+                        },
+                        initCallback: function (settings) {
+                            console.log('initialized', settings);
+                        }
+                    },
+                        {
+                            action: 'mouseover',
+                            callback: function (evt, settings) {
+                                console.log('mouseover', settings);
+                            }
+                        }]
+                },
+                {
+                    name: 'area',
+                    callbacks: [{
+                        action: 'click',
+                        callback: function (evt, settings) {
+                            if(window.location.href.indexOf('shoppable-pdf-viewer') !== -1){
+                                window.location.href = '../pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=' +
+                                    settings.area.target;
+                            }
+
+                            else{
+                                alert('Area of interest with target: ' + settings.area.target + ' was clicked. All settings can be found in console.');
+                                console.log(settings);
+                            }
+
+                        },
+                        initCallback: function (settings) {
+
+                        }
+                    },
+                        {
+                            action: 'mouseover',
+                            callback: function (evt, settings) {
+                                console.log('mouseovered', settings);
+                            }
+                        }]
+                }
+
+            ]
+        }
+    });
+</script>
+
+
+</body>
+</html>

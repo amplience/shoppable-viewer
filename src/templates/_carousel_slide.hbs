@@ -1,0 +1,19 @@
+<div class="swiper-slide">
+    <div class="ajs-pdf-zoom-wrap">
+        <picture class="swiper-lazy swiper-slide-pic">
+            {{#templates}}
+                {{#ifCond name '!=' 'default'}}
+                    <source data-srcset="{{../src}}.webp?{{tpl}} 1x, {{../src}}.webp?{{tpl2x}} 2x"
+                            media="(min-width: {{minWidth}}px)" type="image/webp">
+                    <source data-srcset="{{../src}}?{{tpl}} 1x, {{../src}}?{{tpl2x}} 2x"
+                            media="(min-width: {{minWidth}}px)">
+                {{else}}
+                    <img data-src="{{../src}}?{{tpl}}"
+                         data-srcset="{{../src}}.webp?{{tpl}} 1x, {{../src}}.webp?{{tpl2x}} 2x, {{../src}}?{{tpl}} 1x, {{../src}}?{{tpl2x}} 2x"
+                         title="{{trim ../src}}" alt="{{trim ../src}}"
+                         class="ajs-zoom-img swiper-slide-img swiper-lazy"/>
+                {{/ifCond}}
+            {{/templates}}
+        </picture>
+    </div>
+</div>

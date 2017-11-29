@@ -1,0 +1,57 @@
+.apdf-catalog-title {
+  @include title();
+  display: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+.apdf-catalog-header-box {
+  .apdf-catalog-title {
+    display: block;
+  }
+}
+
+.apdf-catalog-header {
+  margin: 20px auto 13px auto;
+  position: relative;
+  max-width: 1301px;
+
+  .apdf-header-link {
+    @include header-link-txt();
+  }
+
+  .apdf-nav {
+    margin-left: -30px;
+
+    &.apdf-right-nav {
+      float: right;
+    }
+
+    &.apdf-left-nav {
+      float: left;
+    }
+
+    & > li {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 1.5;
+      margin-left: 30px;
+
+      & > a {
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover, &:active, &:focus {
+          .apdf-header-link-txt {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .apdf-close-contet {
+    cursor: pointer;
+  }
+}

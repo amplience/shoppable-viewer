@@ -1,0 +1,9 @@
+{
+  "modules" : [
+    "shared",
+    "Zoom",
+    "Swiper",
+    "Ajax",
+    "POI"
+  ]
+}

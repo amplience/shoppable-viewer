@@ -1,0 +1,111 @@
+.apdf-container {
+
+  @media screen and (min-width: 1600px) {
+    .apdf-catalog-header {
+      max-width: 1181px;
+    }
+  }
+
+  @media screen and (max-width: 1599px) {
+    .apdf-pagination {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    .apdf-catalog-header-box {
+      .apdf-catalog-title {
+        display: none;
+      }
+    }
+
+    .apdf-catalog-header {
+      & > .apdf-catalog-title {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    .apdf-template-standard {
+      margin: 0 auto;
+    }
+
+    .apdf-nav {
+      margin-left: -10px;
+    }
+
+    .apdf-right-nav {
+      margin-right: 20px;
+    }
+
+    .apdf-catalog-header {
+      & > .apdf-catalog-title {
+        display: none;
+      }
+    }
+
+    .apdf-header-link-txt {
+      display: none;
+    }
+
+    .apdf-next, .apdf-prev {
+      display: none;
+    }
+
+    .apdf-carousel-box {
+      padding: 0;
+    }
+
+    .apdf-icon {
+
+      &:before {
+        width: 45px;
+        height: 45px;
+      }
+      &.apdf-icon-download-pdf:before {
+        margin-right: 0;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .apdf-catalog-header {
+      .apdf-nav > li {
+        margin-left: 20px;
+      }
+    }
+
+    .apdf-nav {
+      margin: 0;
+      &.apdf-right-nav {
+        margin-right: 0;
+      }
+
+      &.apdf-left-nav {
+        margin-left: -20px;
+      }
+    }
+
+    .apdf-icon {
+      &:before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .apdf-contents-thumb {
+    padding: 10px 10px 0 10px;
+  }
+
+}
