@@ -17,14 +17,14 @@ This repository is intended as an accelerated starting point for creating respon
 - [3rd-party libs](#3rd-party-libs)
 - [Usage](#usage)
     - [Development](#development)
-    - [Tests](#development)
+    - [Tests](#tests)
     - [Bug / Feature Request](#bug--feature-request)
-    - [License](#license)
 - [Configuration](#configuration)
 	- [Data](#data)
-	- [Styling and Internationalisation](#styling-and-internalization)
+	- [Styling and Internationalisation](#styling-and-internationalisation)
 	- [Imagery](#imagery)
 	- [Carousel](#carousel)
+- [License](#license)
 
 ## Quick Start
 
@@ -38,7 +38,7 @@ $ gulp
 [http://localhost:9100](http://localhost:9100)
 
 ## Demo
-View our [demo](http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/shoppable-pdf-viewer/index.html#1)
+View our [demo](http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/shoppable-viewer/index.html#1)
 
 ## Dependencies
 There is a 3rd party slider dependency ([http://idangero.us/swiper/](http://idangero.us/swiper/)), jquery or and other large libraries are not required.
