@@ -283,6 +283,8 @@
   position: relative;
   width: 30px;
   height: 30px;
+  margin-left: -17px;
+  margin-top: -17px;
   border: 2px solid #fff;
   z-index: 2;
   border-radius: 50%;
