@@ -284,6 +284,7 @@
   width: 30px;
   height: 30px;
   border: 2px solid #fff;
+  z-index: 2;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
