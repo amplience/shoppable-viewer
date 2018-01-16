@@ -10,7 +10,6 @@
         },
         initViewer: function (opts, jsonData) {
             var self = this;
-
             var uniqueId = new Date().getTime();
 
             $('.ajs-pdf-viewer-cont').append('<div class="ajs-pdf-viewer-' + uniqueId + '">\n' +
@@ -32,7 +31,7 @@
                         txt: 'All Catalogs',
                         linkClass: 'apdf-header-link',
                         icoClass: 'apdf-icon-all-catalogs',
-                        url: '#1'
+                        url: opts.catUrl
                     },
                     viewContent: {
                         txt: 'View Contents',
