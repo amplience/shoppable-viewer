@@ -16,6 +16,39 @@
             position: relative;
             min-height: 200px;
         }
+
+        .apdf-carousel-box svg g polygon {
+            fill: transparent;
+            opacity: 1;
+            stroke: #000;
+            stroke-width: 12;
+            stroke-dasharray: 20 60;
+            stroke-linecap: round;
+        }
+
+        @-webkit-keyframes square-anim {
+            25% {
+                stroke-dasharray: 20 50;
+                opacity: 0.5;
+            }
+            50% {
+                stroke-dasharray: 15 35;
+                opacity: 0.7;
+            }
+            75% {
+                stroke-dasharray: 10 20;
+                opacity: 0.8;
+            }
+            100% {
+                stroke-dasharray: 0 0;
+                opacity: 1;
+            }
+        }
+
+        .apdf-carousel-box svg g:hover polygon {
+            animation: square-anim 0.05s 1 ease-in;
+            animation-fill-mode: forwards;
+        }
     </style>
 </head>
 <body>
@@ -30,13 +63,18 @@
 </div>
 <div class="js_panel switcher-panel">
     <div class="input-wrapper">
-        <label for="account_input">Account short name</label>
+        <label for="account_input">Account short name <span class="field-required">*</span></label>
         <input type="text" name="account" placeholder="csdemo" id="account_input">
     </div>
 
     <div class="input-wrapper">
-        <label for="setName_input">Set name</label>
+        <label for="setName_input">Set name <span class="field-required">*</span></label>
         <input type="text" name="setName" placeholder="CA-catalogue_set" id="setName_input">
+    </div>
+
+    <div class="input-wrapper">
+        <label for="base_path">Product base path <span class="field-required">*</span></label>
+        <input type="text" name="basePath" placeholder="http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=" id="base_path">
     </div>
 
     <div class="input-wrapper">
@@ -44,11 +82,7 @@
         <input type="text" name="catUrl" placeholder="http://csdemo.a.bigcontent.io/v1/static/CA-catalogue" id="cat_url">
     </div>
 
-    <div class="input-wrapper">
-        <label for="base_path">Product base path</label>
-        <input type="text" name="basePath" placeholder="http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=" id="base_path">
-    </div>
-    <input type="button" value="Submit" class="js_panel_submit">
+    <input type="button" value="Create" class="js_panel_submit">
 </div>
 
 <script src="../dist/bundle.js"></script>

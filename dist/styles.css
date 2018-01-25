@@ -248,9 +248,6 @@
 .apdf-carousel-box svg g {
   fill: transparent;
   position: relative;
-  stroke: #000;
-  stroke-width: 5;
-  stroke-dasharray: 0 0;
   stroke-linecap: round; }
 
 .apdf-carousel-box svg g polygon {

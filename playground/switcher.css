@@ -8,7 +8,7 @@ html, body{
     bottom: 0;
     left: 15px;
     padding: 15px;
-    width: 200px;
+    width: 370px;
     background-color: #efefef;
     padding-bottom:10px;
     display: none;
@@ -24,6 +24,11 @@ html, body{
     Font-family:Arial, Helvetica, sans-serif;
 }
 
+.field-required{
+    color: #ed0000;
+    font-weight: bold;
+}
+
 .input-wrapper > input[type="text"]{
     font-size:14px;
     width:100%;
@@ -33,6 +38,16 @@ html, body{
     box-sizing: border-box;
     margin-top:2px;
     border: 1px solid #bcbcbc;
+}
+
+.input-wrapper > input[type="text"]::-webkit-input-placeholder {
+    color: #d3d3d3;
+}
+.input-wrapper > input[type="text"]::-moz-placeholder {
+    color: #d3d3d3;
+}
+.input-wrapper > input[type="text"]:-ms-input-placeholder {
+    color: #d3d3d3;
 }
 
 .switcher-panel-nav{

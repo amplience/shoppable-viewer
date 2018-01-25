@@ -139,9 +139,12 @@
 
                 var val = $input.val();
                 var name = $input.prop('name');
+                if(name === 'catUrl'){
+                    return;
+                }
                 if(val.length < 1){
                     passed = false;
-                    alert('All fields are required');
+                    alert('All fields with red asterisk are required');
                     return false;
                 }
 
@@ -165,11 +168,7 @@
                     $panelNav.removeClass('with-error');
                     self.initViewer(settings, jsonData);
                 }
-
-
             });
-
-
         },
         panelInit: function ($panelNav, $panel, $panelButton) {
             var self = this;
