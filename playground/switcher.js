@@ -2,8 +2,8 @@
     window.PDFViewerSwitcher = {
         defaults: {
             account: 'csdemo',
-            setName: 'CA-catalogue_set',
-            catUrl: 'http://csdemo.a.bigcontent.io/v1/static/CA-catalogue',
+            setName: 'CA-catalogue_new_set',
+            catUrl: 'http://csdemo.a.bigcontent.io/v1/static/CA-catalogue_new',
             basePath: 'http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=',
             path: 'http://i1.adis.ws/',
             jsonData: []
