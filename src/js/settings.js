@@ -9,6 +9,7 @@ module.exports = {
         path: 'http://i1.adis.ws/',
         type: 's'
     },
+    https:false,
     cache: Date.now(),
     jsonData: [
         {

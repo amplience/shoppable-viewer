@@ -53,11 +53,15 @@ class PDFViewer {
         }
 
         //Use Amplience set functionality
+
+        var https = this.options.https ? '&protocol=https' : '';
+        
         var url = encodeURI(helpers.singleLineString`${this.options.setData.path}
         ${this.options.setData.type}/
         ${this.options.setData.account}/
         ${this.options.setData.name}
         .js?v=${this.options.cache}
+        ${https}
         &deep=true&func=json`).replace(/[!'()*]/g, escape);
 
         if (this.options.POI.config.length > 0) {
