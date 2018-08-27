@@ -6,10 +6,10 @@ module.exports = {
     setData: {
         account: 'csdemo',
         name: 'CA-catalogue_set',
-        path: 'http://i1.adis.ws/',
+        path: 'https://i1.adis.ws/',
         type: 's'
     },
-    https:false,
+    https:true,
     cache: Date.now(),
     jsonData: [
         {

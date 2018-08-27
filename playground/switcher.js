@@ -3,9 +3,9 @@
         defaults: {
             account: 'csdemo',
             setName: 'CA-catalogue_new_set',
-            catUrl: 'http://csdemo.a.bigcontent.io/v1/static/CA-catalogue_new',
-            basePath: 'http://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=',
-            path: 'http://i1.adis.ws/',
+            catUrl: 'https://csdemo.a.bigcontent.io/v1/static/CA-catalogue_new',
+            basePath: 'https://dev-solutions.s3.amazonaws.com/ca-demo-site/dist/pdp/index.html#store=csdemo&baseUrl=https://c1.adis.ws&id=',
+            path: 'https://i1.adis.ws/',
             jsonData: []
         },
         initViewer: function (opts, jsonData) {
@@ -99,7 +99,7 @@
         getData: function (opts, callback) {
             var self = this;
             $.ajax({
-                url: (opts.path || 'http://i1.adis.ws/') + 's/' + opts.account + '/' + opts.setName + '.js?v=' + new Date().getTime() + '&deep=true&metadata=true',
+                url: (opts.path || 'https://i1.adis.ws/') + 's/' + opts.account + '/' + opts.setName + '.js?protocol=https&v=' + new Date().getTime() + '&deep=true&metadata=true',
                 jsonp: "func",
                 dataType: "jsonp",
                 success: function (response) {
