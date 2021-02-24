@@ -5,7 +5,7 @@ This repository is intended as an accelerated starting point for creating respon
 
 <div align="center">
     <a href="http://amplience.com/">
-        <img src="http://i1.adis.ws/i/csdemo/pdf viewer?v=2" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="890px" height="300px" />
+        <img src="http://cdn.media.amplience.net/i/csdemo/pdf viewer?v=2" alt="Amplience Content Authoring" title="Amplience" style="margin-left:auto; margin-right:auto; display:block;" width="890px" height="300px" />
     </a>
 </div>
 
@@ -86,7 +86,7 @@ If set to use set the following configuration can be added to specify an Amplien
 setData: {
         type: 's',
         account: 'csdemo',
-        path: 'http://i1.adis.ws/',
+        path: 'https://cdn.media.amplience.net/',
         name: 'CA-catalogue_set',
     }
 ```
@@ -97,14 +97,14 @@ If set to use JSON to specify a list of assets.
 jsonData: [
         {
             "type": "img",
-            "src": "http://i1.adis.ws/i/csdemo/CA-catalogue_page1",
+            "src": "https://cdn.media.amplience.net/i/csdemo/CA-catalogue_page1",
             "width": 1240,
             "height": 1500,
             "format": "JPEG",
             "opaque": "true"
         }, {
             "type": "img",
-            "src": "http://i1.adis.ws/i/csdemo/CA-catalogue_page2",
+            "src": "https://cdn.media.amplience.net/i/csdemo/CA-catalogue_page2",
             "width": 2479,
             "height": 1500,
             "format": "JPEG",
